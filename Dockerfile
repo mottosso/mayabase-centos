@@ -14,6 +14,7 @@ RUN yum update -y && yum install -y \
     elfutils \
     gstreamer-plugins-base.x86_64 \
     gamin \
+    git \
     mesa-utils \
     tcsh \
     xorg-x11-server-Xorg \
