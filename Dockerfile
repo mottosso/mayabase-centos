@@ -20,3 +20,13 @@ RUN yum update -y && yum install -y \
     xorg-x11-server-Xorg \
     wget && \
     yum groupinstall -y "X Window System"
+
+RUN wget https://bootstrap.pypa.io/get-pip.py && \
+    python get-pip.py && \
+    pip install \
+        nose \
+        mock \
+        unittest2
+
+# Expose Python libraries to Maya
+ENV PYTHONPATH=/usr/lib/python2.6/site-packages
