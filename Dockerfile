@@ -23,10 +23,10 @@ RUN yum update -y && yum install -y \
 
 RUN wget https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py && \
-    pip install \
+    pip install --target=/usr/local/lib/python2.7/site-packages \
         nose \
         mock \
         unittest2
 
 # Expose Python libraries to Maya
-ENV PYTHONPATH=/usr/lib/python2.6/site-packages
+ENV PYTHONPATH=/usr/local/lib/python2.7/site-packages
