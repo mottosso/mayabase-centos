@@ -20,7 +20,8 @@ RUN yum update -y && yum install -y \
     tcsh \
     xorg-x11-server-Xorg \
     wget && \
-    yum groupinstall -y "X Window System"
+    yum groupinstall -y "X Window System" && \
+    yum clean all
 
 RUN wget https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py && \
